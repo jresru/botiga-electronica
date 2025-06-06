@@ -79,4 +79,4 @@ Aplicación de comercio electrónico desarrollada en PHP para la gestión de usu
 ---
 
 **Autor:**  
-Tu nombre o equipo  
+Josep Ramon Estadella
