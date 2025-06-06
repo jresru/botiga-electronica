@@ -49,6 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $asunto = "petició de justificació de comanda rebutjada";
         $mensajeCorreo = "Usuario: $usuario<br>Correo: $correo<br>ID Comanda: $idComanda<br>Motivo: $contenido";
 
+        // --- Guardar en archivo ---
+        $rutaArchivo = __DIR__ . '/solicitudes_rechazo.txt';
+        $linea = "Usuario: $usuario\nCorreo: $correo\nID Comanda: $idComanda\nContenido: $contenido\n\n";
+        file_put_contents($rutaArchivo, $linea, FILE_APPEND);
+
         if ($gestorCorreo) {
             $mail = new PHPMailer(true);
             try {

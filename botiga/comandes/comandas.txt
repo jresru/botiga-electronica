@@ -1,2 +1,3 @@
 Peras,12,6,1,si,c
 Peras,12,6,1,si,c
+Peras,12,6,1,si,Jordi

@@ -53,6 +53,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             : "petició d'esborrament del compte de client";
         $mensajeCorreo = "Usuario: $usuario<br>Correo: $correo<br>Motivo: $motivo<br>Contenido: $contenido";
 
+        // --- Guardar en archivo ---
+        $rutaArchivo = __DIR__ . '/solicitudes_modificacion.txt';
+        $linea = "Usuario: $usuario\nCorreo: $correo\nMotivo: $motivo\nContenido: $contenido\n\n";
+        file_put_contents($rutaArchivo, $linea, FILE_APPEND);
+
         if ($gestorCorreo) {
             $mail = new PHPMailer(true);
             try {

@@ -1,1 +1,15 @@
-Usuario: cliente1/nCorreo: cliente1@ejemplo.com/nMotivo: modificacion/nContenido: No quiero tener mas esta cuenta/n/nUsuario: cliente1/nCorreo: cliente1@ejemplo.com/nMotivo: modificacion/nContenido: No quiero tener mas esta cuenta/n/n
+Usuario: cliente1/nCorreo: cliente1@ejemplo.com/nMotivo: modificacion/nContenido: No quiero tener mas esta cuenta/n/nUsuario: cliente1/nCorreo: cliente1@ejemplo.com/nMotivo: modificacion/nContenido: No quiero tener mas esta cuenta/n/nUsuario: Jordi
+Correo: jordim@gmail.com
+Motivo: modificacion
+Contenido: el email esta incorrecte
+
+Usuario: Jordi
+Correo: jordim@gmail.com
+Motivo: eliminacion
+Contenido: No la vull utiliztar mes
+
+Usuario: Jordi
+Correo: jordim@gmail.com
+Motivo: eliminacion
+Contenido: No la vull utilitzar mes
+

@@ -1,1 +1,0 @@
-Usuario: cliente1/nCorreo: cliente1@ejemplo.com/nID Comanda: 2/nContenido: No me llego bien/n/n
