@@ -14,25 +14,25 @@ if (isset($_SESSION['usuario'])) {
 }
 
 if (isset($_GET['area_usuario'])) {
-    if (!isset($_SESSION['usuario'])) {
+    if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo'])) {
         header('Location: /PROYECTO/Projecto/botiga/apl/login.php');
         exit();
     }
 
-    $usuario = $_SESSION['usuario'];
-
-    if (strpos($usuario, 'admin') !== false) {
-        header('Location: /PROYECTO/Projecto/botiga/apl/dashboard_admin.php');
-        exit();
-    } elseif (strpos($usuario, 'cliente') !== false) {
-        header('Location: /PROYECTO/Projecto/botiga/apl/dashboard_cliente.php');
-        exit();
-    } elseif (strpos($usuario, 'gestor') !== false) {
-        header('Location: /PROYECTO/Projecto/botiga/apl/dashboard_gestor.php');
-        exit();
-    } else {
-        header('Location: /PROYECTO/Projecto/botiga/apl/login.php');
-        exit();
+    // Redirige según el tipo de usuario
+    switch ($_SESSION['tipo']) {
+        case 'admin':
+            header('Location: /PROYECTO/Projecto/botiga/apl/dashboard_admin.php');
+            exit();
+        case 'cliente':
+            header('Location: /PROYECTO/Projecto/botiga/apl/dashboard_cliente.php');
+            exit();
+        case 'gestor':
+            header('Location: /PROYECTO/Projecto/botiga/apl/dashboard_gestor.php');
+            exit();
+        default:
+            header('Location: /PROYECTO/Projecto/botiga/apl/login.php');
+            exit();
     }
 }
 ?>

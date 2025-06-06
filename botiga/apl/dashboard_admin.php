@@ -3,7 +3,36 @@ session_start();
 
 // Verificar si el usuario está autenticado y es un administrador
 if (!isset($_SESSION['usuario']) || strpos($_SESSION['usuario'], 'admin') === false) {
-    header('Location: login.php');
+    // Página de error personalizada
+    http_response_code(403);
+    echo "<!DOCTYPE html>
+    <html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Acceso Denegado</title>
+        <style>
+            body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; }
+            .error-container {
+                margin: 80px auto;
+                max-width: 400px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px #ccc;
+                padding: 32px;
+                text-align: center;
+            }
+            .error-container h1 { color: #c00; }
+            .error-container a { color: #007bff; text-decoration: none; }
+        </style>
+    </head>
+    <body>
+        <div class='error-container'>
+            <h1>Acceso Denegado</h1>
+            <p>No tienes permisos para acceder a esta página.</p>
+            <a href='login.php'>Iniciar sesión</a>
+        </div>
+    </body>
+    </html>";
     exit();
 }
 
