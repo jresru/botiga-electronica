@@ -3,5 +3,4 @@ gestor1,$2y$10$3T67tAovk/GE0fV4vFgOhe.5Vf2VEuxluqk69aiTQEYm5nWFT7Mda,101,Juan Ge
 cliente1,$2y$10$DWeXgdHanHIrSIb.Cejm.uCN25e1Txn5k5/MnfVFoOhNwbJnh.GCG,201,Pepe Cliente,cliente1@correo.com,987654321,cliente,08001,4111111111111111,gestor1
 Josep,$2y$10$/x.OYYI9nGF5J7kugAgkZOEmOLTtpc6/8c49p3.YbBZPzxyDbYW5.,Josep,Josep Ramon,misterproxd4@gmail.com,555,gestor
 J2,$2y$10$IhbLaxObdT1hVkTsFLC58OIj/Ss53.HoGvx8c8qE5ft3ZpUwTyS.K,J2,JUAN,JU@gmail.com,112312,gestor
-Guille,$2y$10$jtkHQG7rrqoGaJ5XBjviae6CpNSB6CUS0vBWoUZVTZIgVOnsgI6le,6184,guille,g@gmail.com,555,cliente,255,3435,1
 Jordi,$2y$10$7LLJqvlZm3izRXde6CVCh.wK2nR1fD/7vd4OL20Hp8AT2ecDkmIwq,4897,Jordi marull,jordim@gmail.com,555,cliente,0921378,512334t,Josep
