@@ -1,3 +1,4 @@
 Peras,12,6,1,si,c
 Peras,12,6,1,si,c
 Peras,12,6,1,si,Jordi
+raim,4,2,23,no,Jordi
