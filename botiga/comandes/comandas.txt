@@ -1,4 +1,2 @@
-
-ADVOCATS,24,2,6,si,c
 Peras,12,6,1,si,c
-raim,4,2,23,no,c
+Peras,12,6,1,si,c

@@ -433,8 +433,21 @@ function mostrarClientes($archivoUsuarios) {
                 <th>Código Postal</th>
                 <th>Tarjeta</th>
                 <th>Gestor Asignado</th>
+                <th>Correo Gestor</th>
             </tr>";
             foreach ($clientes as $campos) {
+                // Buscar gestor asignado y su correo
+                $gestorAsignado = isset($campos[9]) ? trim($campos[9]) : '';
+                $correoGestor = '';
+                if ($gestorAsignado !== '') {
+                    foreach ($usuarios as $lineaGestor) {
+                        $cGestor = explode(',', $lineaGestor);
+                        if (isset($cGestor[0]) && $cGestor[0] === $gestorAsignado && isset($cGestor[4])) {
+                            $correoGestor = $cGestor[4];
+                            break;
+                        }
+                    }
+                }
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($campos[0]) . "</td>";
                 echo "<td>" . htmlspecialchars($campos[2]) . "</td>";
@@ -444,7 +457,8 @@ function mostrarClientes($archivoUsuarios) {
                 echo "<td>" . htmlspecialchars($campos[6]) . "</td>";
                 echo "<td>" . (isset($campos[7]) ? htmlspecialchars($campos[7]) : '') . "</td>";
                 echo "<td>" . (isset($campos[8]) ? htmlspecialchars($campos[8]) : '') . "</td>";
-                echo "<td>" . (isset($campos[9]) ? htmlspecialchars($campos[9]) : '') . "</td>";
+                echo "<td>" . htmlspecialchars($gestorAsignado) . "</td>";
+                echo "<td>" . htmlspecialchars($correoGestor) . "</td>";
                 echo "</tr>";
             }
             echo "</table>";
