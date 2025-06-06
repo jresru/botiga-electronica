@@ -185,10 +185,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nuevoClienteUsuario = trim($_POST['client_username']);
         $nuevoClienteId = rand(1000,9999); // O usa un campo de formulario si lo tienes
         $nuevoClienteContrasena = $_POST['client_password'];
+        // Asigna aquí el resto de campos antes de comprobar si están vacíos
+        $nuevoClienteNombre = trim($_POST['client_name']);
+        $nuevoClienteCorreo = trim($_POST['client_email']);
+        $nuevoClienteTelefono = trim($_POST['client_phone']);
+        $nuevoClienteCP = trim($_POST['client_cp']);
+        $nuevoClienteTarjeta = trim($_POST['client_credit_card']);
+        $nuevoClienteGestor = trim($_POST['client_manager']);
         // Validar contraseña segura
         if (!password_segura($nuevoClienteContrasena)) {
             echo "<p style='color: red;'>La contraseña debe tener al menos 8 caracteres, incluir mayúsculas, minúsculas, un número y un símbolo.</p>";
-        } else if (!empty($nuevoClienteUsuario) && !empty($nuevoClienteContrasena) && !empty($nuevoClienteNombre) && !empty($nuevoClienteCorreo) && !empty($nuevoClienteTelefono) && !empty($nuevoClienteCP) && !empty($nuevoClienteTarjeta) && !empty($nuevoClienteGestor)) {
+        } else if (
+            !empty($nuevoClienteUsuario) &&
+            !empty($nuevoClienteContrasena) &&
+            !empty($nuevoClienteNombre) &&
+            !empty($nuevoClienteCorreo) &&
+            !empty($nuevoClienteTelefono) &&
+            !empty($nuevoClienteCP) &&
+            !empty($nuevoClienteTarjeta) &&
+            !empty($nuevoClienteGestor)
+        ) {
             $nuevoClienteHash = password_hash($nuevoClienteContrasena, PASSWORD_DEFAULT);
             $cliente = UsuarioFactory::crearCliente($nuevoClienteUsuario, $nuevoClienteHash, $nuevoClienteId, $nuevoClienteNombre, $nuevoClienteCorreo, $nuevoClienteTelefono, $nuevoClienteCP, $nuevoClienteTarjeta, $nuevoClienteGestor);
             if (file_exists($archivoUsuarios)) {

@@ -179,3 +179,48 @@ echo "<a href='/PROYECTO/Projecto'>INICI</a>";
     </div>
 </body>
 </html>
+
+<?php
+// Mostrar la sección de tus comandas
+echo "<h2>Tus Comandas</h2>";
+
+$comandesArchivo = "C:/xampp/htdocs/PROYECTO/Projecto/botiga/comandes/comandas.txt";
+$comandasUsuario = [];
+if (file_exists($comandesArchivo)) {
+    $todasComandas = file($comandesArchivo, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($todasComandas as $linea) {
+        $datos = explode(",", $linea);
+        // El usuario está en la última columna
+        if (count($datos) >= 6 && trim($datos[5]) === $usuario) {
+            $comandasUsuario[] = $datos;
+        }
+    }
+}
+
+if (!empty($comandasUsuario)) {
+    echo "<table border='1' cellspacing='0' cellpadding='5'>";
+    echo "<thead><tr>
+        <th>ID Comanda</th>
+        <th>Nom Producte</th>
+        <th>ID Producte</th>
+        <th>Preu Producte (€)</th>
+        <th>IVA (%)</th>
+        <th>Disponibilitat</th>
+    </tr></thead><tbody>";
+    $idComanda = 1;
+    foreach ($comandasUsuario as $datos) {
+        echo "<tr>";
+        echo "<td>" . $idComanda . "</td>";
+        echo "<td>" . htmlspecialchars($datos[0]) . "</td>";
+        echo "<td>" . htmlspecialchars($datos[1]) . "</td>";
+        echo "<td>" . htmlspecialchars($datos[2]) . "</td>";
+        echo "<td>" . htmlspecialchars($datos[3]) . "</td>";
+        echo "<td>" . htmlspecialchars($datos[4]) . "</td>";
+        echo "</tr>";
+        $idComanda++;
+    }
+    echo "</tbody></table>";
+} else {
+    echo "<p>No tienes comandas registradas.</p>";
+}
+?>
