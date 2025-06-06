@@ -1,0 +1,5 @@
+Pomas,1,12,12,si
+Peras,12,6,1,si
+ADVOCATS,24,2,6,si
+
+raim,4,2,23,no

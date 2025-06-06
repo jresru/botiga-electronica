@@ -1,0 +1,8 @@
+admin,$2y$10$Sc9mrkglkLT1VNl3kgA3sOqdJW6nMhmD0Hpj0eFwHmp4x3FRO.MNG,1,Administrador,admin@correo.com,000000000,admin
+gestor1,$2y$10$3T67tAovk/GE0fV4vFgOhe.5Vf2VEuxluqk69aiTQEYm5nWFT7Mda,101,Juan Gestor,gestor1@correo.com,123456789,gestor
+cliente1,$2y$10$DWeXgdHanHIrSIb.Cejm.uCN25e1Txn5k5/MnfVFoOhNwbJnh.GCG,201,Pepe Cliente,cliente1@correo.com,987654321,cliente,08001,4111111111111111,gestor1
+Josep,$2y$10$/x.OYYI9nGF5J7kugAgkZOEmOLTtpc6/8c49p3.YbBZPzxyDbYW5.,Josep,Josep Ramon,misterproxd4@gmail.com,555,gestor
+J,$2y$10$l3J.SMc1LihBg1ToHWwmaOz2raTt.Jcj0U820pd2oRIz7rQ.U8n7a,1531,JON,misterproxd4@gmail.com,555,cliente,0987,1826735t,Josep
+J2,$2y$10$IhbLaxObdT1hVkTsFLC58OIj/Ss53.HoGvx8c8qE5ft3ZpUwTyS.K,J2,JUAN,JU@gmail.com,112312,gestor
+Guille,$2y$10$jtkHQG7rrqoGaJ5XBjviae6CpNSB6CUS0vBWoUZVTZIgVOnsgI6le,6184,guille,g@gmail.com,555,cliente,255,3435,1
+c,$2y$10$3Ruf0McedYWFkVwn1Jl5EerdhTfTu9Xp..Hi0IaSayf/RHW.hYBqG,4403,c,ca@gmai.com,555,cliente,255,3435,J2

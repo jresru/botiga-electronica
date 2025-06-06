@@ -1,0 +1,1 @@
+Usuario: cliente1/nCorreo: cliente1@ejemplo.com/nMotivo: modificacion/nContenido: No quiero tener mas esta cuenta/n/nUsuario: cliente1/nCorreo: cliente1@ejemplo.com/nMotivo: modificacion/nContenido: No quiero tener mas esta cuenta/n/n

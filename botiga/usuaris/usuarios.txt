@@ -1,0 +1,3 @@
+admin,<?= password_hash('FjeClot2425', PASSWORD_DEFAULT) ?>
+gestor1,<?= password_hash('passwordGestor', PASSWORD_DEFAULT) ?>
+cliente1,<?= password_hash('passwordCliente', PASSWORD_DEFAULT) ?>

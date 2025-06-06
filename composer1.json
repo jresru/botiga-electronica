@@ -1,0 +1,7 @@
+{
+    "name": "botiga-electronica",
+    "description": "Comercio Electrónico Botiga PHP",
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}
